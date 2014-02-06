@@ -74,7 +74,7 @@ class Field_blurb
 				'id' => ($i+1),
 				'title' => isset($input[$i]['title']) ? $input[$i]['title'] : '',
 				'image' => isset($input[$i]['image']) ? $input[$i]['image'] : '',
-				'body' => isset($input[$i]['body']) ? $input[$i]['body'] : '',
+				'body' => isset($input[$i]['body']) ? parse_markdown($input[$i]['body']) : '',
                 'action' => isset($input[$i]['action']) ? $input[$i]['action'] : ''
 				);
 		}
